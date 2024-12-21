@@ -1,0 +1,31 @@
+{
+    "name": "caratiq/connector",
+    "description": "Connect Magento to CaratIq",
+    "require": {
+        "php": "^8.2",
+        "magento/framework": "103.0.*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "CarratIQ\\Connector\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohd Suhel Mansoori",
+            "email": "suhel.mansoori@scaleupally.io",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

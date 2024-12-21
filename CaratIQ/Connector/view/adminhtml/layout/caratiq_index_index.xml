@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>CaratIQ</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="CaratIQ\Connector\Block\Adminhtml\Connect" name="caratiq_connector_block" template="CaratIQ_Connector::connect.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

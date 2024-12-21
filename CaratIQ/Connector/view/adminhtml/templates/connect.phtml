@@ -1,0 +1,20 @@
+<br><br><br><br><br><br>
+
+<?php if ($block->isConnected()): ?>
+     <!-- If connected, show the disconnect button -->
+     <form id="disconnectForm" method="post" action="<?= $block->getDisconnectUrl(); ?>">
+        <input type="hidden" name="form_key" value="<?= $block->getFormKey(); ?>" />
+        <button id="disconnectCaratIQ" type="submit">Disconnect from CaratIQ</button>
+    </form>
+<?php else: ?>
+    <!-- If not connected, show the connect button -->
+    <button id="redirectCaratIQ" type="button">Connect to CaratIQ</button>
+    <script type="text/javascript">
+        require(['jquery'], function($) {
+            $('#redirectCaratIQ').on('click', function() {
+                var redirectUrl = '<?= $block->escapeUrl($block->getConnectUrl()) ?>';
+                window.location.href = redirectUrl;
+            });
+        });
+    </script>
+<?php endif; ?>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework/Event/etc/events.xsd">
+
+    <!-- Customer Creation Events -->
+    <event name="customer_save_after">
+        <observer name="caratiq_customer_saved" instance="CaratIQ\Connector\Observer\CustomerCreated" />
+    </event>
+
+    <!-- Order Placement Exvent -->
+    <event name="sales_order_place_after">
+        <observer name="caratiq_order_placed" instance="CaratIQ\Connector\Observer\OrderPlaced" />
+    </event>
+</config>

@@ -30,7 +30,7 @@ class Index extends Action
     {
         // Check connection status via API
         $storeUrl = $this->storeManager->getStore()->getBaseUrl();
-        $apiUrl = 'https://13ca-103-108-5-157.ngrok-free.app/api/ecommerce-integration-status';
+        $apiUrl = 'https://caratiq-cms.scaleupdevops.in/api/ecommerce-integration-status';
         
         // Prepare request data
         $requestData = [

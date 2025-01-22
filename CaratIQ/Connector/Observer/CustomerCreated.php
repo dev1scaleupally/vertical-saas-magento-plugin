@@ -36,7 +36,7 @@ class CustomerCreated implements ObserverInterface
         $customerData['shop_url'] = $shopUrl;
 
         // Call 3rd party API
-        $this->curl->post('https://2559-103-108-5-228.ngrok-free.app/api/create-magento-contact', json_encode($customerData));
+        $this->curl->post('https://caratiq-cms.scaleupdevops.in/api/create-magento-contact', json_encode($customerData));
         $this->curl->addHeader("Content-Type", "application/json");
     }
 }

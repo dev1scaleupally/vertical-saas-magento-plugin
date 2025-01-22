@@ -28,7 +28,7 @@ class Disconnect extends Action implements HttpPostActionInterface
     {
         // Get the base URL of the store
         $storeUrl = $this->storeManager->getStore()->getBaseUrl();
-        $apiUrl = 'https://13ca-103-108-5-157.ngrok-free.app/api/disconnect-ecommerce';
+        $apiUrl = 'https://caratiq-cms.scaleupdevops.in/api/disconnect-ecommerce';
 
         // Prepare request data
         $requestData = [

@@ -115,11 +115,13 @@ class OrderPlaced implements ObserverInterface
         }
 
         // Add tax details
-        $orderData['tax_details'] = [
-            'total_tax' => $order->getTaxAmount(),
-            'base_tax' => $order->getBaseTaxAmount(),
-            'shipping_tax_amount' => $order->getShippingTaxAmount(),
-        ];
+        foreach ($order->getAllVisibleItems() as $item) {
+            $orderData['tax_details'][] = [
+                'tax_percent' => $item->getTaxPercent(),
+                'tax_amount' => $item->getTaxAmount(),
+                'tax_title' => $item->getTaxClassName(),
+            ];
+        }
 
         return $orderData;
     }

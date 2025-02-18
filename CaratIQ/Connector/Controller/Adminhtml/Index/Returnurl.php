@@ -60,7 +60,7 @@ class Returnurl extends Action
             }
 
             // Send the auth code to the third-party API for verification
-            $this->curl->post('https://caratiq-cms.scaleupdevops.in/api/verify-auth-code', ['code' => $authCode]);
+            $this->curl->post('https://vertical-saas.bndigital.dev/api/verify-auth-code', ['code' => $authCode]);
             $response = json_decode($this->curl->getBody(), true);
 
             
@@ -79,7 +79,7 @@ class Returnurl extends Action
             $magentoToken = $this->_generateAdminToken($adminUserId);
 
             // Send the generated Magento token back to the third-party API
-            $this->curl->post('https://caratiq-cms.scaleupdevops.in/api/verify-magento-token', [
+            $this->curl->post('https://vertical-saas.bndigital.dev/api/verify-magento-token', [
                 'magento_token' => $magentoToken,
                 'token' => $response['data']['token'] ?? ''
             ]);

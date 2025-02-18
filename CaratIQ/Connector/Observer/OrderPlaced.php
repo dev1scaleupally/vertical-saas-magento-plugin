@@ -48,7 +48,7 @@ class OrderPlaced implements ObserverInterface
             $this->curl->addHeader("Content-Type", "application/json");
 
             // Post the order data to the external API
-            $this->curl->post('https://caratiq-cms.scaleupdevops.in/api/create-magento-order', $jsonData);
+            $this->curl->post('https://vertical-saas.bndigital.dev/api/create-magento-order', $jsonData);
 
             // Optional: Handle the response
             // $response = $this->curl->getBody();

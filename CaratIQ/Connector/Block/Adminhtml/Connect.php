@@ -38,7 +38,7 @@ class Connect extends Template
     {
         // Add logic to check connection status from the API and return true or false
         $storeUrl = $this->storeManager->getStore()->getBaseUrl();
-        $apiUrl = 'https://caratiq-cms.scaleupdevops.in/api/ecommerce-integration-status';
+        $apiUrl = 'https://vertical-saas.bndigital.dev/api/ecommerce-integration-status';
 
         $requestData = [
             'ecommerceType' => 'magento',
@@ -55,7 +55,7 @@ class Connect extends Template
     public function getConnectUrl()
     {
         // Third-party URL
-        $thirdPartyUrl = 'https://caratiq-website.scaleupdevops.in/magento-auth';
+        $thirdPartyUrl = 'https://vertical-saas.bndigital.dev/magento-auth';
 
         // Your return URL, which is the Magento admin URL that handles the return
         $returnUrl = $this->getUrl('caratiq/index/returnurl', ['_secure' => true]);

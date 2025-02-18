@@ -28,7 +28,7 @@ class Disconnect extends Action implements HttpPostActionInterface
     {
         // Get the base URL of the store
         $storeUrl = $this->storeManager->getStore()->getBaseUrl();
-        $apiUrl = 'https://caratiq-cms.scaleupdevops.in/api/disconnect-ecommerce';
+        $apiUrl = 'https://vertical-saas.bndigital.dev/api/disconnect-ecommerce';
 
         // Prepare request data
         $requestData = [
